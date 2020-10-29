@@ -2,25 +2,53 @@
 /// use an array for rpsls ["rock", "paper"]
 /// use an if/else if/else statements for results
 
-let playerOne = prompt("What is player one's name?");
-let playerTwo = prompt("What is player two's name?");
+let playerOne = promptFor("What is player one's name?");
+let playerTwo = promptFor("What is player two's name?");
 
 class Game {
     constructor() {
       this.playerOne = new Player(" ");
       this.playerTwo = new Player(" ");
       this.playerThree = new Player ("AI");
-
-      this.rock;
-      this.paper;
-      this.scissors;
-      this.lizard;
-      this.smock;
-
-      this.rpsls = [];
-
-
 }
+
+let gameGestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+
+if(gameGestures[0] > gameGestures[2]) {
+    console.log("Rock crushes scissors.");
+}
+else if(gameGestures[1] > gameGestures[0]){
+    console.log("Paper covers rock.");
+}
+else if(gameGestures[0] > gameGestures[3]){
+    console.log("Rock crushes Lizard.");
+}
+else if(gameGestures[2] > gameGestures[1]){
+    console.log("Scissors cuts paper.");
+}
+else if{gameGestures[2] > gameGestures[3]{
+    console.log("Scissors decapitates Lizard.");
+}
+else if(gameGestures[3] > gameGestures[4]){
+    console.log("Lizard poisons Spock.");
+}
+else if(gameGestures[4] > gameGestures[3]){
+    console.log("Spock smashes scissors.");
+}
+else if(gameGestures[3] > gameGestures[1]){
+    console.log("Lizard eats paper.");
+}
+else if(gameGestures[1] > gameGestures[4]){
+    console.log("Paper disproves Spock.");
+}
+else if(gameGestures[4] > gameGestures[0]){
+    console.log("Spock vaporizes rock.");
+}
+
+
+
+
+
 
 runGame() {
     this.displayMessage();
