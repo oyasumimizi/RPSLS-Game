@@ -44,8 +44,21 @@ else if(gameGestures[1] > gameGestures[4]){
 else if(gameGestures[4] > gameGestures[0]){
     console.log("Spock vaporizes rock.");
 }
-
-
+else if(gameGestures[0] === gameGestures[0]){
+    console.log("Two rocks can't smash eachother. It's a tie.");
+}
+else if(gameGestures[1] === gameGestures[1]){
+    console.log("Two papers can't cover eachother. It's a tie.");
+}
+else if(gameGestures[2] === gameGestures[2]){
+    console.log("Two scissors can't cut eachother. It's a tie.")
+}
+else if(gameGestures[3] === gameGestures[3]){
+    console.log("You both have chosen Lizard. It's a tie.");
+}
+else if(gameGestures[4] === gameGestures[4]){
+    console.log("You both have chosen Smock. It's a tie.");
+}
 
 
 
