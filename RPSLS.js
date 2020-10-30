@@ -2,65 +2,67 @@
 /// use an array for rpsls ["rock", "paper"]
 /// use an if/else if/else statements for results
 
-let playerOne = promptFor("What is player one's name?");
-let playerTwo = promptFor("What is player two's name?");
 
 class Game {
     constructor() {
+        let playerOne = promptFor("What is player one's name?");
+        let playerTwo = promptFor("What is player two's name?");
       this.playerOne = new Player(" ");
       this.playerTwo = new Player(" ");
-      this.playerThree = new Player ("AI");
-}
-
-let gameGestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-
-if(gameGestures[0] > gameGestures[2]) {
-    console.log("Rock crushes scissors.");
-}
-else if(gameGestures[1] > gameGestures[0]){
-    console.log("Paper covers rock.");
-}
-else if(gameGestures[0] > gameGestures[3]){
-    console.log("Rock crushes Lizard.");
-}
-else if(gameGestures[2] > gameGestures[1]){
-    console.log("Scissors cuts paper.");
-}
-else if{gameGestures[2] > gameGestures[3]{
-    console.log("Scissors decapitates Lizard.");
-}
-else if(gameGestures[3] > gameGestures[4]){
-    console.log("Lizard poisons Spock.");
-}
-else if(gameGestures[4] > gameGestures[3]){
-    console.log("Spock smashes scissors.");
-}
-else if(gameGestures[3] > gameGestures[1]){
-    console.log("Lizard eats paper.");
-}
-else if(gameGestures[1] > gameGestures[4]){
-    console.log("Paper disproves Spock.");
-}
-else if(gameGestures[4] > gameGestures[0]){
-    console.log("Spock vaporizes rock.");
-}
-else if(gameGestures[0] === gameGestures[0]){
-    console.log("Two rocks can't smash eachother. It's a tie.");
-}
-else if(gameGestures[1] === gameGestures[1]){
-    console.log("Two papers can't cover eachother. It's a tie.");
-}
-else if(gameGestures[2] === gameGestures[2]){
-    console.log("Two scissors can't cut eachother. It's a tie.")
-}
-else if(gameGestures[3] === gameGestures[3]){
-    console.log("You both have chosen Lizard. It's a tie.");
-}
-else if(gameGestures[4] === gameGestures[4]){
-    console.log("You both have chosen Smock. It's a tie.");
-}
+    }
+    /// create a method about game setup it will take UI and it will take two users and an AI to 
+    compareGestures(){
 
 
+        let gameGestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+
+        if(gameGestures[0] > gameGestures[2]) {
+            console.log("Rock crushes scissors.");
+        }
+        else if(gameGestures[1] > gameGestures[0]){
+            console.log("Paper covers rock.");
+        }
+        else if(gameGestures[0] > gameGestures[3]){
+            console.log("Rock crushes Lizard.");
+        }
+        else if(gameGestures[2] > gameGestures[1]){
+            console.log("Scissors cuts paper.");
+        }
+        else if(gameGestures[2] > gameGestures[3]){
+            console.log("Scissors decapitates Lizard.");
+        }
+        else if(gameGestures[3] > gameGestures[4]){
+            console.log("Lizard poisons Spock.");
+        }
+        else if(gameGestures[4] > gameGestures[3]){
+            console.log("Spock smashes scissors.");
+        }
+        else if(gameGestures[3] > gameGestures[1]){
+            console.log("Lizard eats paper.");
+        }
+        else if(gameGestures[1] > gameGestures[4]){
+            console.log("Paper disproves Spock.");
+        }
+        else if(gameGestures[4] > gameGestures[0]){
+            console.log("Spock vaporizes rock.");
+        }
+        else if(gameGestures[0] === gameGestures[0]){
+            console.log("Two rocks can't smash eachother. It's a tie.");
+        }
+        else if(gameGestures[1] === gameGestures[1]){
+            console.log("Two papers can't cover eachother. It's a tie.");
+        }
+        else if(gameGestures[2] === gameGestures[2]){
+            console.log("Two scissors can't cut eachother. It's a tie.")
+        }
+        else if(gameGestures[3] === gameGestures[3]){
+            console.log("You both have chosen Lizard. It's a tie.");
+        }
+        else if(gameGestures[4] === gameGestures[4]){
+            console.log("You both have chosen Smock. It's a tie.");
+        }
+
+    }
 
 
 runGame() {
@@ -69,10 +71,10 @@ runGame() {
     while(this.playerOne.score < 3 && this.playerTwo.score < 3) {
 
 
-
+}
 }
 
-    this.displayGameWinner
+    // this.displayGameWinner
 
 displayMessage(){
     console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock.");
@@ -94,7 +96,7 @@ displayGameWinner() {
             console.log(this.playerThree + "AI wins!");
         }
 }
-
+}
 
 class Player {
     constructor(name) {
@@ -104,13 +106,13 @@ class Player {
 
 
 
-generateRandomNumber() {
+    generateRandomNumber() {
     let randomNumber = Math.floor(Math.random());
     return randomNumbe
 }
 
 
-
+}
 
 let game = new Game();
 game.runGame();
