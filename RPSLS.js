@@ -1,23 +1,33 @@
 "use strict";
-/// use an array for rpsls ["rock", "paper"] - x 
+/// use an array for rpsls ["rock", "paper",etc] - x 
 /// use an if/else if/else statements for results - x
 /// add a way for playerone and playertwo to use the gamegestures to play RPSLS
 /// add an AI and second player input
 ///
-/// finish the method down below to add to where it says [here]
 /// add .tolowercase for [bad user input]. i already added an else statement for another [bad user input]
-/// edit at the end to see if inheiritance [parent and child] is used correctly
+/// edit at the end to see if inheiritance [parent and child] is used correctly x
 /// a best of three game - x
-/// make sure the correct player will get the right points at the end of each round[?]
+/// make sure the correct player will get the right points at the end of each round[i think it's done]
 
 class Game {
     constructor() {
-        let playerOne = prompt("What is player one's name?");
-        let playerTwo = prompt("What is player two's name?");
       this.playerOne = new Player(" ");
       this.playerTwo = new Player(" ");
+
+      this.gameGestures = [];
+
+
     }
-    /// create a method about game setup [here]
+
+
+function playerInfo(playerOne, playerTwo) {
+    let playerInfoInput = playerOne, playerTwo;
+    return playerInfoInput;
+}
+
+let playerInfoInputOne = prompt("What is player one's name?");
+let playerInfoInputTwo = prompt("Would you like to play with another person or an AI?");
+    
     compareGestures(){
 
 
@@ -76,6 +86,7 @@ class Game {
 
 runGame() {
     this.displayMessage();
+    //Call a function that asks how many players and then creates appropriate human/AI for playerOne, playerTwo
 
     while(this.playerOne.score < 3 && this.playerTwo.score < 3) {
         let playerOneTotal = this.playerOne
@@ -125,23 +136,50 @@ class Player {
     constructor(name) {
       this.score = 0;
       this.name = name;
+      this.gameGesture
+    }
+    chooseGesture(){
+        console.log("Player " + this.name + "has chose the gesture of " + this.gameGesture + "and has now achieved the score of " + this.score + ".");
+    }
+}
+
+ class Human extends Player{
+    constructor(name){
+        this.score = 0;
+        this.name = name;
+        this.gameGesture
+    }
+    chooseGesture(){
+        console.log("Player " + this.name + "has chose the gesture of " + this.gameGesture + "and has now achieved the score of " + this.score + ".");
+    }
+}
+
+class AI extends Player{
+    constructor(name){
+        this.score = 0;
+        this.name = name;
+        this.gameGesture
+    }
+}
+
+
+//I don't think generateRandomNumber is useful here [or atleast now?]
+    // generateRandomNumber() {
+    // let randomNumber = Math.floor(Math.random());
+    // return randomNumber
+    // }
+
+
+    chooseGesture(){
+        console.log("Override this method!");
     }
 
 
-
-    generateRandomNumber() {
-    let randomNumber = Math.floor(Math.random());
-    return randomNumber
 }
 
-
-}
+//Add Human and AI classes, slide 24 of JavascriptOOP lecture
+//They will each override chooseGesture method
 
 // let game = new Game();
 // game.runGame();
 
-// /// METHOD ABOUT GAME SET UP //// A FUNCTION LIKE IN GROUP PROJECT 'DATA.JS'(?)
-// let game = {
-//     playerOne: (" ");
-//
-// }
