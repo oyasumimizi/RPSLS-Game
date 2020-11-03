@@ -2,9 +2,9 @@
 /// use an array for rpsls ["rock", "paper",etc] - x 
 /// use an if/else if/else statements for results - x
 /// add a way for playerone and playertwo to use the gamegestures to play RPSLS
-/// add an AI and second player input
+/// add an AI and second player input x
 ///
-/// add .tolowercase for [bad user input]. i already added an else statement for another [bad user input]
+/// i already added an else statement for [bad user input] x
 /// edit at the end to see if inheiritance [parent and child] is used correctly x
 /// a best of three game - x
 /// make sure the correct player will get the right points at the end of each round[i think it's done]
@@ -16,7 +16,6 @@ class Game {
 
       this.gameGestures = [];
 
-
     }
 
 
@@ -27,6 +26,12 @@ function playerInfo(playerOne, playerTwo) {
 
 let playerInfoInputOne = prompt("What is player one's name?");
 let playerInfoInputTwo = prompt("Would you like to play with another person or an AI?");
+    if(playerInfoInputTwo === person.tolowercase){
+       promptFor("What is the other player's name?");
+    }
+        else{
+            console.log("You have chosen to play against an AI.");
+        }
     
     compareGestures(){
 
@@ -83,6 +88,7 @@ let playerInfoInputTwo = prompt("Would you like to play with another person or a
         }
     }
 
+    
 
 runGame() {
     this.displayMessage();
@@ -108,6 +114,7 @@ runGame() {
         this.displayGameWinner();
     }
   
+    return playerInfoInput;
 
 }
 
@@ -173,13 +180,11 @@ class AI extends Player{
     chooseGesture(){
         console.log("Override this method!");
     }
-
-
 }
 
 //Add Human and AI classes, slide 24 of JavascriptOOP lecture
 //They will each override chooseGesture method
 
-// let game = new Game();
-// game.runGame();
+let game = new Game();
+game.runGame();
 
